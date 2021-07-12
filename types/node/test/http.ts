@@ -92,6 +92,8 @@ import * as net from 'net';
 
     // flush
     res.flushHeaders();
+
+    res.req; // $ExpectType IncomingMessage
 }
 
 // http ClientRequest
@@ -134,6 +136,8 @@ import * as net from 'net';
 
     // method
     const method: string = req.method;
+
+    const rawHeaderNames: string[] = req.getRawHeaderNames();
 }
 
 {
